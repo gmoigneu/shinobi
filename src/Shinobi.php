@@ -74,7 +74,7 @@ class Shinobi
     public function is($role)
     {
         if ($this->auth->check()) {
-            return $this->auth->user()->is($role);
+            return $this->auth->user()->isRole($role);
         } else {
             if ($role === 'guest') {
                 return true;
